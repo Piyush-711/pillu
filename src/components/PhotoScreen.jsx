@@ -44,7 +44,7 @@ export default function PhotoScreen({ onNext }) {
 
     return (
         <motion.div
-            className="min-h-screen flex flex-col items-center justify-center px-4 py-6 relative z-10"
+            className="min-h-screen flex flex-col items-center justify-center px-4 py-2 relative z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -53,12 +53,12 @@ export default function PhotoScreen({ onNext }) {
 
             {/* Header section */}
             <motion.div
-                className="text-center max-w-3xl mx-auto mb-10"
+                className="text-center max-w-3xl mx-auto mb-2"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 1 }}
             >
-                <h1 className="text-2xl md:text-3xl text-pink-200 leading-relaxed mb-4 font-semibold">
+                <h1 className="text-2xl md:text-3xl text-pink-200 leading-relaxed mb-0 font-semibold">
                     From the first day I met you, life became <span className="text-pink-400 font-bold">brighter...</span>
                 </h1>
 
@@ -117,13 +117,13 @@ export default function PhotoScreen({ onNext }) {
 
             {/* Continue button */}
             <motion.div
-                className="text-center mt-10"
+                className="text-center mt-1"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 50 }}
                 transition={{ duration: 0.8 }}
             >
                 <motion.p
-                    className="text-pink-300/80 text-sm mb-6 italic"
+                    className="text-pink-300/80 text-sm mb-1 italic"
                     animate={{ opacity: [0.6, 1, 0.6] }}
                     transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
