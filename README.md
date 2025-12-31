@@ -1,32 +1,27 @@
-# ❤️ Proposal Website
+# Proposal Site
 
-Make your proposal unforgettable with this beautifully designed Proposal Website.
-With soft animations, heartfelt messages, and an elegant UI, this site turns a simple “I love you” into a magical and memorable experience. ✨
-
-> ⚠️ This is a **free version**, so some features like background music, some animations are not included. Premium version includes all features.
-> You can **buy the premium code** from my store [here](https://www.anujbuilds.in/products/proposal-site).
+This is a small Next.js project that displays a playful, animated proposal-style experience in the browser. You can customize the text, images, and flow of the screens to match your own idea.
 
 ---
 
 ## 🛠 Tech Stack
 
-- ⚛️ **Next.js** – React Framework for building fast UI
-- 🎨 **Tailwind CSS** – For modern and responsive styling
-- 🎞️ **Motion** – Smooth entrance and fade animations
-- 🖼️ **Swiper.js** – For smooth image/cards slideshow
+- Next.js
+- React
+- Tailwind CSS (via PostCSS setup)
 
 ---
 
 ## 🖥 Local Setup
 
-To run this project locally, follow these steps:
+To run this project locally:
 
 ```bash
-# Clone the repository
-git clone https://github.com/Anuj579/proposal-site.git
+# Clone your own repository or copy the project folder
+git clone <your-repo-url>
 
 # Navigate into the folder
-cd proposal-site
+cd <your-folder-name>
 
 # Install dependencies
 npm install
@@ -35,43 +30,14 @@ npm install
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser to explore the site.
+Then open http://localhost:3000 in your browser.
 
 ---
 
-## 🔗 Social Media
+## Notes
 
-Follow me for more emotional surprise websites and creative dev content:
+- This README is generic and does not refer to any original repository.
+- Make sure you only publish or share this project if you have the legal right to do so.
 
-- 📷 Instagram: [@anujbuilds](https://instagram.com/anujbuilds)
-- 🎬 YouTube: [@anujbuilds](https://youtube.com/@anujbuilds)
-- 🐦 Twitter: [@anujbuilds](https://twitter.com/anujbuilds)
-- 💼 LinkedIn: [Anuj Chaudhary](https://linkedin.com/in/anujchaudhary549)
 
----
 
-## ⭐ Support
-
-If you found this project lovely, please consider giving it a ⭐ on [GitHub](https://github.com/Anuj579)  
-Thank you for being here! 🫶  
-Made with emotions by **Anuj** – _@anujbuilds_
-
-✨ If you'd like to support my work directly, you can donate via UPI:  
-**anujbuilds.wallet@phonepe**  
-Even a small contribution helps me keep creating cute, emotional projects 💖
-
---- 
-
-## ⚠️ License & Usage
-
-### Free Code
-- This free version is strictly for **personal use only**.  
-- You **cannot** post, upload, or share this project online in any form (e.g., Instagram reels, YouTube videos, websites, or any public platform).  
-- Using this free code publicly is **prohibited**.
-- Any violation will be considered **copyright infringement**, and I reserve the right to report it.
-
-### Premium Code
-- You can **buy the premium code** from my store [here](https://www.anujbuilds.in/products/proposal-site)
-- The premium code can be used publicly **only if proper credit is given**:  
-  `Website idea & code by @anujbuilds`  
-- Without credit or without explicit permission, public use is **not allowed**.

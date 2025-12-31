@@ -26,8 +26,9 @@ export default function FirstScreen({ onNext }) {
                         delay: 0.5,
                     }}
                 >
-                    <div className="w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-purple-500/20 to-rose-500/20 flex items-center justify-center border-2 border-pink-400/30 pulse-glow">
-                        <motion.div
+                    <div className="romantic-circle w-36 h-36 mx-auto">
+                        <div className="romantic-circle-inner">
+                            <motion.div
                             transition={{
                                 duration: 2,
                                 repeat: Number.POSITIVE_INFINITY,
@@ -35,7 +36,8 @@ export default function FirstScreen({ onNext }) {
                             }}
                         >
                             <img src="/gif/cute.gif" className="" alt="panda jumping" />
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.div>
 

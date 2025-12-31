@@ -1,6 +1,6 @@
 "use client"
-  
-import { useState, useEffect } from "react"
+
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import FirstScreen from "@/components/FirstScreen"
 import QuestionScreen from "@/components/QuestionScreen"
@@ -12,22 +12,56 @@ import CuteLoader from "@/components/CuteLoader"
 export default function ProposalSite() {
   const [currentScreen, setCurrentScreen] = useState("loader")
   const [isLoading, setIsLoading] = useState(true)
+  const audioRef = useRef(null)
 
   useEffect(() => {
+    // Background music setup
+    const audio = new Audio("/audio/bg.mp3")
+    audio.loop = true
+    audioRef.current = audio
+
+    const playAudio = async () => {
+      try {
+        await audio.play()
+      } catch {
+        // Autoplay might be blocked; will try again on first user interaction
+      }
+    }
+
+    playAudio()
+
     const timer = setTimeout(() => {
       setIsLoading(false)
       setCurrentScreen("first")
     }, 3000)
-
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.currentTime = 0
+      }
+    }
   }, [])
 
   const nextScreen = (screen) => {
     setCurrentScreen(screen)
   }
 
+  const handleUserInteraction = () => {
+    if (audioRef.current && audioRef.current.paused) {
+      audioRef.current.play().catch(() => { })
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-fuchsia-950/30 via-black/70 to-rose-950/40 relative overflow-hidden">
+    <div className="romantic-bg" onClick={handleUserInteraction}>
+
+      {/* Animated hearts + glow orb background */}
+      <div className="romantic-bg-hearts" aria-hidden="true">
+        {Array.from({ length: 20 }).map((_, index) => (
+          <span key={index} className="romantic-heart" />
+        ))}
+      </div>
 
       <AnimatePresence mode="wait">
         {isLoading && <CuteLoader key="loader" onComplete={() => setCurrentScreen("first")} />}
@@ -58,18 +92,6 @@ export default function ProposalSite() {
 
         {currentScreen === "final" && <FinalScreen key="final" />}
       </AnimatePresence>
-
-      {/* Watermark */}
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 1,
-        }}
-        className="fixed bottom-4 right-4 text-[13px] text-white/40 pointer-events-none z-50 font-light">
-        @anujbuilds
-      </motion.div>
     </div>
   )
 }

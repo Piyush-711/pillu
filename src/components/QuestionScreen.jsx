@@ -63,8 +63,9 @@ export default function QuestionScreen({ question, onYes, isFirst }) {
                         delay: 0.3,
                     }}
                 >
-                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-pink-500/20 to-purple-500/20 flex items-center justify-center border-2 border-purple-400/40 glow-effect">
-                        <motion.div
+                    <div className="romantic-circle w-24 h-24 mx-auto">
+                        <div className="romantic-circle-inner">
+                            <motion.div
                             animate={{
                                 rotate: [0, 10, -10, 0],
                             }}
@@ -75,7 +76,8 @@ export default function QuestionScreen({ question, onYes, isFirst }) {
                             }}
                         >
                             <Heart className="w-12 h-12 text-purple-500 fill-current" />
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.div>
 
